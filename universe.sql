@@ -1,9 +1,4 @@
---
--- PostgreSQL database dump
---
 
--- Dumped from database version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
--- Dumped by pg_dump version 12.17 (Ubuntu 12.17-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -17,9 +12,6 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 DROP DATABASE universe;
---
--- Name: universe; Type: DATABASE; Schema: -; Owner: freecodecamp
---
 
 CREATE DATABASE universe WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
 
@@ -43,9 +35,6 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
---
--- Name: additional; Type: TABLE; Schema: public; Owner: freecodecamp
---
 
 CREATE TABLE public.additional (
     additional_id integer NOT NULL,
@@ -57,9 +46,6 @@ CREATE TABLE public.additional (
 
 ALTER TABLE public.additional OWNER TO freecodecamp;
 
---
--- Name: additional_additional_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
 
 CREATE SEQUENCE public.additional_additional_id_seq
     AS integer
@@ -72,16 +58,8 @@ CREATE SEQUENCE public.additional_additional_id_seq
 
 ALTER TABLE public.additional_additional_id_seq OWNER TO freecodecamp;
 
---
--- Name: additional_additional_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
-
 ALTER SEQUENCE public.additional_additional_id_seq OWNED BY public.additional.additional_id;
 
-
---
--- Name: additional_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
 
 CREATE SEQUENCE public.additional_id_seq
     AS integer
@@ -94,16 +72,10 @@ CREATE SEQUENCE public.additional_id_seq
 
 ALTER TABLE public.additional_id_seq OWNER TO freecodecamp;
 
---
--- Name: additional_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
-
 ALTER SEQUENCE public.additional_id_seq OWNED BY public.additional.id;
 
 
---
--- Name: galaxy; Type: TABLE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE TABLE public.galaxy (
     galaxy_id integer NOT NULL,
@@ -117,9 +89,7 @@ CREATE TABLE public.galaxy (
 
 ALTER TABLE public.galaxy OWNER TO freecodecamp;
 
---
--- Name: galaxy_galaxy_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.galaxy_galaxy_id_seq
     AS integer
@@ -132,16 +102,12 @@ CREATE SEQUENCE public.galaxy_galaxy_id_seq
 
 ALTER TABLE public.galaxy_galaxy_id_seq OWNER TO freecodecamp;
 
---
--- Name: galaxy_galaxy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 
 
---
--- Name: galaxy_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.galaxy_id_seq
     AS integer
@@ -154,16 +120,12 @@ CREATE SEQUENCE public.galaxy_id_seq
 
 ALTER TABLE public.galaxy_id_seq OWNER TO freecodecamp;
 
---
--- Name: galaxy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.galaxy_id_seq OWNED BY public.galaxy.id;
 
 
---
--- Name: moon; Type: TABLE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE TABLE public.moon (
     moon_id integer NOT NULL,
@@ -179,9 +141,7 @@ CREATE TABLE public.moon (
 
 ALTER TABLE public.moon OWNER TO freecodecamp;
 
---
--- Name: moon_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.moon_id_seq
     AS integer
@@ -194,16 +154,11 @@ CREATE SEQUENCE public.moon_id_seq
 
 ALTER TABLE public.moon_id_seq OWNER TO freecodecamp;
 
---
--- Name: moon_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.moon_id_seq OWNED BY public.moon.id;
 
 
---
--- Name: moon_moon_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
 
 CREATE SEQUENCE public.moon_moon_id_seq
     AS integer
@@ -216,16 +171,12 @@ CREATE SEQUENCE public.moon_moon_id_seq
 
 ALTER TABLE public.moon_moon_id_seq OWNER TO freecodecamp;
 
---
--- Name: moon_moon_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.moon_moon_id_seq OWNED BY public.moon.moon_id;
 
 
---
--- Name: planet; Type: TABLE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE TABLE public.planet (
     planet_id integer NOT NULL,
@@ -240,9 +191,7 @@ CREATE TABLE public.planet (
 
 ALTER TABLE public.planet OWNER TO freecodecamp;
 
---
--- Name: planet_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.planet_id_seq
     AS integer
@@ -255,16 +204,12 @@ CREATE SEQUENCE public.planet_id_seq
 
 ALTER TABLE public.planet_id_seq OWNER TO freecodecamp;
 
---
--- Name: planet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.planet_id_seq OWNED BY public.planet.id;
 
 
---
--- Name: planet_planet_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.planet_planet_id_seq
     AS integer
@@ -277,16 +222,12 @@ CREATE SEQUENCE public.planet_planet_id_seq
 
 ALTER TABLE public.planet_planet_id_seq OWNER TO freecodecamp;
 
---
--- Name: planet_planet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.planet_planet_id_seq OWNED BY public.planet.planet_id;
 
 
---
--- Name: planet_star_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.planet_star_id_seq
     AS integer
@@ -299,16 +240,12 @@ CREATE SEQUENCE public.planet_star_id_seq
 
 ALTER TABLE public.planet_star_id_seq OWNER TO freecodecamp;
 
---
--- Name: planet_star_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
---
+
 
 ALTER SEQUENCE public.planet_star_id_seq OWNED BY public.planet.star_id;
 
 
---
--- Name: star; Type: TABLE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE TABLE public.star (
     star_id integer NOT NULL,
@@ -323,9 +260,7 @@ CREATE TABLE public.star (
 
 ALTER TABLE public.star OWNER TO freecodecamp;
 
---
--- Name: star_galaxy_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
---
+
 
 CREATE SEQUENCE public.star_galaxy_id_seq
     AS integer
